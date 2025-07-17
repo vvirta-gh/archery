@@ -1,0 +1,14 @@
+# deploy.yml
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Build Docker image
+      - name: Push to registry
+      - name: Deploy

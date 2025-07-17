@@ -1,0 +1,14 @@
+
+name: Manual Operations
+
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: 'Operation to run'
+        required: true
+        type: choice
+        options:
+          - 'data-export'
+          - 'backup'
+          - 'cleanup'
